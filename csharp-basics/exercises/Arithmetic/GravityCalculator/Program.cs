@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace GravityCalculator
 {
@@ -11,8 +10,9 @@ namespace GravityCalculator
             double initialVelocity = 0.0;
             double fallingTime = 10.0;
             double initialPosition = 0.0;
-            double finalPosition = 0.0;
-            Console.WriteLine("The object's position after " + fallingTime + " seconds is " + finalPosition + " m.");
+            double finalPosition = 0.5 * (gravity * (fallingTime * fallingTime)) + initialVelocity * (fallingTime);
+            Console.WriteLine("The object's position after " + fallingTime + " seconds falling from "
+                + initialPosition + "m (sea level) is " + finalPosition + " m.");
             Console.ReadKey();
         }
     }
