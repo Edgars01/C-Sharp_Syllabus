@@ -11,7 +11,7 @@ namespace SumAverageRunningInt
             const int lowerBound = 1;
             const int upperBound = 100;
 
-            for (var number = lowerBound; number <= upperBound; ++number) 
+            for (var number = lowerBound; number <= upperBound; ++number)
             {
                 sum += number;
             }
