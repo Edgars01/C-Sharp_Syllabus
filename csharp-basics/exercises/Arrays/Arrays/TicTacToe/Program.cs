@@ -71,22 +71,42 @@ namespace TicTacToe
         private static void DisplayBoard()
         {
             winners();
-            Console.WriteLine("  0  " + board[0, 0] + "|" + board[0, 1] + "|" + board[0, 2]);
-            Console.WriteLine("    --+-+--");
-            Console.WriteLine("  1  " + board[1, 0] + "|" + board[1, 1] + "|" + board[1, 2]);
-            Console.WriteLine("    --+-+--");
-            Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
-            Console.WriteLine("    --+-+--");
+            Console.WriteLine("");
+            Console.WriteLine("           0  1  2");
+            Console.WriteLine("         0  " + board[0, 0] + "|" + board[0, 1] + "|" + board[0, 2]);
+            Console.WriteLine("           --+-+--");
+            Console.WriteLine("         1  " + board[1, 0] + "|" + board[1, 1] + "|" + board[1, 2]);
+            Console.WriteLine("           --+-+--");
+            Console.WriteLine("         2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
+            Console.WriteLine("           --+-+--");
+            Console.WriteLine("");
         }
 
         private static void MakeMove()
         {
+            int y;
+            int x;
             Console.WriteLine("Enter position on x axys 0, 1, 2");
-            var inputX = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out y))
+            {
+                Console.WriteLine("That's not a number. Please Enter a number.");
+            }
             Console.WriteLine("Enter position on y axys 0, 1, 2");
-            int inputY = Convert.ToInt32(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out x))
+            {
+                Console.WriteLine("That's not a number. Please Enter a number.");
+            }
 
-            if (board[inputY, inputX] != ' ')
+            if (0 < x && x > 3)
+            {
+                Console.WriteLine("Number not in range");
+            }
+            else if (0 < y && y > 3)
+            {
+                Console.WriteLine("Number not in range");
+            }
+
+            if (board[y, x] != ' ')
             {
                 playerXO = playerXO == 'X' ? 'X' : 'O';
             }
@@ -94,13 +114,14 @@ namespace TicTacToe
             {
                 playerXO = playerXO == 'X' ? 'O' : 'X';
             }
-            if (board[inputY, inputX] != ' ')
+
+            if (board[y, x] != ' ')
             {
                 Console.WriteLine("Invalid move, try again.\n");
                 MakeMove();
             }
 
-            board[inputY, inputX] = playerXO;
+            board[y, x] = playerXO;
             Console.Clear();
             DisplayBoard();
             Win();
