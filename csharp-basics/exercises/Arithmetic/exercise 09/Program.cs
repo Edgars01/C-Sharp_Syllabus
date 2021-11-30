@@ -14,17 +14,17 @@ namespace exercise_09
             double heightInInches = height * 0.39;
             double bmi = (weightInPounds * 703) / Math.Pow(heightInInches, 2);
 
-            if (bmi > 25)
+            if (bmi >= 25)
             {
-                Console.WriteLine("You are overweight.");
+                Console.WriteLine($"You are overweight.Your BMI is: {Math.Round((decimal)bmi, 2)}");
             }
-            else if (bmi < 18.5)
+            else if (bmi <= 18.5)
             {
-                Console.WriteLine("You are underweight.");
+                Console.WriteLine($"You are underweight.Your BMI is: {Math.Round((decimal)bmi, 2)}");
             }
             else
             {
-                Console.WriteLine("Your weight is optimal.");
+                Console.WriteLine($"Your weight is optimal.Your BMI is: {Math.Round((decimal)bmi, 2)}");
             }
             Console.ReadKey();
         }
