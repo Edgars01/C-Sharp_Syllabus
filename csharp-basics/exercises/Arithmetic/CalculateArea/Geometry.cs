@@ -4,20 +4,17 @@
     {
         public static double AreaOfCircle(int radius)
         {
-            double area = (3.14) * radius * radius;
-            return area;
+            return (3.14) * radius * radius;    
         }
 
         public static double AreaOfRectangle(int length, int width)
         {
-            double area = length * width;
-            return area;
+            return length * width;          
         }
 
         public static double AreaOfTriangle(int ground, int h)
         {
-            double area = ground * h * 0.5;
-            return area;
+            return ground * h * 0.5; 
         }
     }
 }
