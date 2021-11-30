@@ -1,27 +1,73 @@
 ﻿using System;
+using System.Linq;
 
 namespace LargestNumber
 {
     class Program
     {
-        //TODO: Write a C# program to to find the largest of three numbers.
+       public static int[] terms = new int[0];
+       private static int numbOFtim;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Input the 1st number: ");
-            var input1 = Console.ReadLine();
+            play();
+        }
 
-            Console.WriteLine("Input the 2nd number: ");
-            var input2 = Console.ReadLine();
+        public static void play()
+        {
+            Console.WriteLine("Enter number of numbers you wish to input: ");
+            var numberOfTimes = Console.ReadLine();
+            if (int.TryParse(numberOfTimes, out numbOFtim))
+            {
+                for (int runs = 0; runs < numbOFtim; runs++)
+                {
+                    logic();
+                    Console.Clear();
+                }
+                bigestNumAndStuff();
+                exit();
+            }
+            else
+            {
+                Console.WriteLine("Error! Numbers only: ");
+                Console.ReadLine();
+                exit();
+            }
+        }
 
-            Console.WriteLine("Input the 3rd number: ");
-            var input3 = Console.ReadLine();
-        
-            /*
-            todo - expected output:
-            Input the 1st number: 25
-            Input the 2nd number: 78
-            Input the 3rd number: 87
-             */
+        public static void logic()
+        {
+            Console.Write("Enter number: ");
+            var userInput = Console.ReadLine();
+            int value;
+            if (int.TryParse(userInput, out value))
+            {
+                terms = terms.Append(value).ToArray();
+            }
+            else
+            {
+                Console.WriteLine("Error! Numbers only: ");
+            }
+        }
+
+        private static void exit()
+        {
+            Console.Write("Do you want to continue (Y/N)? ");
+            Console.WriteLine(" ");
+            char ch = Console.ReadLine()[0];
+            if (ch == 'n' || ch == 'N')
+            {
+                Environment.Exit(0);
+            }
+            Console.Clear();
+            play();
+        }
+
+        private static void bigestNumAndStuff()
+        {
+            int maxValue = terms.Max();
+            int maxIndex = terms.ToList().IndexOf(maxValue);
+            Console.WriteLine($"Bigest value you entered is: {maxValue} with index {maxIndex}");      
         }
     }
 }
