@@ -9,8 +9,10 @@ namespace exercise_08
             CalculatePay(7.50, 35);
 
             CalculatePay(8.20, 47);
-
+            
             CalculatePay(10.00, 73);
+
+            CalculatePay(78000.50, 32125);
         }
         public static int CalculatePay(double pay, double hours)
         {
