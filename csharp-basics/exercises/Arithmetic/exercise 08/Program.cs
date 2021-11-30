@@ -7,7 +7,9 @@ namespace exercise_08
         static void Main(string[] args)
         {
             CalculatePay(7.50, 35);
+
             CalculatePay(8.20, 47);
+
             CalculatePay(10.00, 73);
         }
         public static int CalculatePay(double pay, double hours)
