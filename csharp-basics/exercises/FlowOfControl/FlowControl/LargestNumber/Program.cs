@@ -10,32 +10,33 @@ namespace LargestNumber
 
         static void Main(string[] args)
         {
-            play();
+            Play();
         }
 
-        public static void play()
+        public static void Play()
         {
             Console.WriteLine("Enter number of numbers you wish to input: ");
+            Array.Clear(terms, 0, terms.Length);
             var numberOfTimes = Console.ReadLine();
             if (int.TryParse(numberOfTimes, out numbOFtim))
             {
                 for (int runs = 0; runs < numbOFtim; runs++)
                 {
-                    logic();
+                    Logic();
                     Console.Clear();
                 }
-                bigestNumAndStuff();
-                exit();
+                BigestNumAndStuff();
+                Exit();
             }
             else
             {
                 Console.WriteLine("Error! Numbers only: ");
                 Console.ReadLine();
-                exit();
+                Exit();
             }
         }
 
-        public static void logic()
+        public static void Logic()
         {
             Console.Write("Enter number: ");
             var userInput = Console.ReadLine();
@@ -50,7 +51,7 @@ namespace LargestNumber
             }
         }
 
-        private static void exit()
+        private static void Exit()
         {
             Console.Write("Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
@@ -60,14 +61,14 @@ namespace LargestNumber
                 Environment.Exit(0);
             }
             Console.Clear();
-            play();
+            Play();
         }
 
-        private static void bigestNumAndStuff()
+        private static void BigestNumAndStuff()
         {
             int maxValue = terms.Max();
             int maxIndex = terms.ToList().IndexOf(maxValue);
-            Console.WriteLine($"Bigest value you entered is: {maxValue} with index {maxIndex}");      
+            Console.WriteLine($"Bigest value you entered is: {maxValue}");      
         }
     }
 }
