@@ -193,7 +193,6 @@ namespace TicTacToe
             }
             return win;
         }
-  
         private static void winners()
         {
             Console.WriteLine($"X score: {playerX}, O score: {playerO}, and tie: {PlayerTie}");
