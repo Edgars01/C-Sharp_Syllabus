@@ -57,12 +57,12 @@ namespace CalculateArea
             if (radius < 0)
             {
                 Console.WriteLine("Error! Only positive numbers please..");
-                exit();
+                Exit();
             }
           
             Console.WriteLine("The circle's area is "
                     + Geometry.AreaOfCircle(radius));
-            backToMenu();
+            BackToMenu();
         }
 
         public static void CalculateRectangleArea()
@@ -79,12 +79,12 @@ namespace CalculateArea
             if (length < 0 || width < 0)
             {
                 Console.WriteLine("Error! Only positive numbers please..");
-                exit();
+                Exit();
             }
 
             Console.WriteLine("The rectangle's area is "
                     + Geometry.AreaOfTriangle(length, width));
-            backToMenu();
+            BackToMenu();
         }
 
         public static void CalculateTriangleArea()
@@ -101,15 +101,15 @@ namespace CalculateArea
             if (ground < 0 || height < 0)
             {
                 Console.WriteLine("Error! Only positive numbers please..");
-                exit();
+                Exit();
             }
           
             Console.WriteLine("The triangle's area is "
                     + Geometry.AreaOfRectangle(ground, height));
-            backToMenu();
+            BackToMenu();
         }
 
-        public static void exit()
+        public static void Exit()
         {
             ConsoleKeyInfo ch;
             Console.WriteLine("Press the Escape (Esc) key to quit: \n");
@@ -117,11 +117,10 @@ namespace CalculateArea
             if (ch.Key == ConsoleKey.Escape)
             {
                 Environment.Exit(0);
-            }
-        
+            } 
         }
 
-        private static void backToMenu()
+        private static void BackToMenu()
         {
             Console.WriteLine("Press m to get back to Menu: \n");
             string key = Console.ReadKey().Key.ToString();
