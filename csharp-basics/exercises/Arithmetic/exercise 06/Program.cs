@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace exercise_06 // COZALOZA
+namespace exercise_06 
 {
     internal class Program
     {
@@ -41,7 +41,7 @@ namespace exercise_06 // COZALOZA
 				}
 				number++;
 				}
-			Console.WriteLine();
+				Console.WriteLine();
 			}
 		}
 	}
