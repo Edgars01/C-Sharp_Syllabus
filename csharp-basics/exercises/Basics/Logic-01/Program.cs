@@ -10,10 +10,9 @@ namespace Logic_01
             Console.WriteLine(Trim(" Codelex ")); //Expected "Codelex"
             Console.ReadKey();
         }
-
         static string Trim(string text)
         {
-            Trim();
+            return text.Trim();
         }
     }
 }
