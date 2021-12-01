@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListExercise4
 {
@@ -21,12 +18,12 @@ namespace ListExercise4
             };
 
             //fixme
-            //string element = ...;
-            //Console.WriteLine("First element: " + element);
-
+            string element = colors[0];
+            Console.WriteLine("First element: " + element);
             //fixme
-            //element = ...;
-            //Console.WriteLine("Third element: " + element);
+            element = colors[2];
+            Console.WriteLine("Third element: " + element);
+            Console.ReadKey();
         }
     }
 }
