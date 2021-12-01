@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace exercise_06
+namespace exercise_06 // COZALOZA
 {
     internal class Program
     {
