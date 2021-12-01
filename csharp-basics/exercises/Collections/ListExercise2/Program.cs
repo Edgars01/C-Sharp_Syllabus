@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListExercise2
 {
@@ -19,13 +16,11 @@ namespace ListExercise2
             colors.Add("White");
             colors.Add("Black");
 
-            /*
-            fixme
-            for (...) 
+            foreach (var item in colors)
             {
-              Console.WriteLine(element);
+              Console.WriteLine(item);
             }
-            */
+            Console.ReadKey();           
         }
     }
 }
