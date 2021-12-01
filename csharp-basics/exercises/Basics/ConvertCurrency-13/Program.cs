@@ -21,11 +21,10 @@ namespace ConvertCurrency_13
             Console.ReadKey();
         }
 
-
         //change this method accordingly
         static double ConvertToUSD(double price)
         {
-            return price;
+            return Math.Round(price * 1.4, 2);
         }
     }
 }
