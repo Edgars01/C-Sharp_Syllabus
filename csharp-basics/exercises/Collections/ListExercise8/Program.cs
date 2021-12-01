@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListExercise8
 {
@@ -26,9 +23,12 @@ namespace ListExercise8
 
             //TODO: Sort list
             //Collections....
+            colors.Sort();
 
             Console.Write("List after sort: ");
             Console.WriteLine(string.Join(",", colors));
+
+            Console.ReadKey();
         }
     }
 }
