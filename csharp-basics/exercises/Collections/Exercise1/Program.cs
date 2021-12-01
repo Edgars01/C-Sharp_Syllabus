@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
@@ -24,9 +21,31 @@ namespace Exercise1
 
             //todo - replace array with an List and print out the results
 
+            var list = new List<string> { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            Console.WriteLine(" List: " + string.Join(", ", list) + "\n");
+
             //todo - replace array with a HashSet and print out the results
 
+            var hashset = new HashSet<string> { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            Console.WriteLine(" Hashset: " + string.Join(", ", hashset) + "\n");
+
             //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+
+            Console.WriteLine(" Dictionary: \n");
+            var dictionary = new Dictionary<string, string>();
+            dictionary.Add(" Audi", "Audi AG");
+            dictionary.Add(" BMW", "Bayerische Motoren Werke AG");
+            dictionary.Add(" Honda", "Honda Motor Company");
+            dictionary.Add(" Mercedes", "company..");
+            dictionary.Add(" VolksWagen", "company");
+            dictionary.Add(" Tesla", "another company");
+
+            foreach (var element in dictionary)
+            {
+                Console.WriteLine($"{element.Key}, {element.Value}");
+            }
+
+            Console.ReadKey();
         }
     }
 }
