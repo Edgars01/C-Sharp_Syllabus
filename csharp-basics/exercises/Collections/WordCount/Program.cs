@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace WordCount
 {
@@ -10,7 +7,18 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            string fileLocation = File.ReadAllText(@"C:\Users\gbhui\Desktop\Projects\C-sharp-basic\C-Sharp_Syllabus\csharp-basics\exercises\Collections\WordCount\lear.txt");
+            int lineCount = fileLocation.Split('\n').Length;
+            int wrd = 1;
+            for (int i = 0; i <= fileLocation.Length - 1; i++) {              
+                if (fileLocation[i] == ' ' || fileLocation[i] == '\n' || fileLocation[i] == '\t') {
+                    wrd++;
+                }         
+            }
+            Console.WriteLine($"Lines = {lineCount}");
+            Console.WriteLine($"Words = {wrd}");
+            Console.WriteLine($"Chars = {fileLocation.Length}");
+            Console.ReadKey();
+        }     
     }
 }
