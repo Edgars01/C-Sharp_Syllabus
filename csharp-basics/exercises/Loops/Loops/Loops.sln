@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{6E5E8B39-8CFE-4C97-88D7-6EF558EBA8E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exercise5.csproj", "{D867C905-974C-4D7B-91E1-EA5CDD81E9BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise5", "Exercise5\Exercise5.csproj", "{D867C905-974C-4D7B-91E1-EA5CDD81E9BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise6 FIZZBUZZ", "Exercise6 FIZZBUZZ\Exercise6 FIZZBUZZ.csproj", "{5603C932-E5CB-4AAF-815D-85842F4EB60A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise6 FIZZBUZZ", "Exercise6 FIZZBUZZ\Exercise6 FIZZBUZZ.csproj", "{5603C932-E5CB-4AAF-815D-85842F4EB60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise7 PIGLET", "Exercise7 PIGLET\Exercise7 PIGLET.csproj", "{A76ED851-F0C4-4CD9-A946-D5FB6DA22097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5603C932-E5CB-4AAF-815D-85842F4EB60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5603C932-E5CB-4AAF-815D-85842F4EB60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5603C932-E5CB-4AAF-815D-85842F4EB60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76ED851-F0C4-4CD9-A946-D5FB6DA22097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76ED851-F0C4-4CD9-A946-D5FB6DA22097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76ED851-F0C4-4CD9-A946-D5FB6DA22097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76ED851-F0C4-4CD9-A946-D5FB6DA22097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
