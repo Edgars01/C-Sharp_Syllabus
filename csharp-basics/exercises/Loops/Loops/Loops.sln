@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise7 PIGLET", "Exercis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiFigure", "Exercise 8 FIGURE\AsciiFigure.csproj", "{E3FC9F01-D333-493E-966D-4B9E57A556EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollTwoDice", "RollTwoDice\RollTwoDice.csproj", "{37BF6F84-1D50-4943-9E65-37F221777E94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RollTwoDice", "RollTwoDice\RollTwoDice.csproj", "{37BF6F84-1D50-4943-9E65-37F221777E94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise10", "Exercise10\Exercise10.csproj", "{11F91B21-015B-4F13-A6FB-999CEB1EA4F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{37BF6F84-1D50-4943-9E65-37F221777E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37BF6F84-1D50-4943-9E65-37F221777E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37BF6F84-1D50-4943-9E65-37F221777E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F91B21-015B-4F13-A6FB-999CEB1EA4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F91B21-015B-4F13-A6FB-999CEB1EA4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F91B21-015B-4F13-A6FB-999CEB1EA4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F91B21-015B-4F13-A6FB-999CEB1EA4F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
