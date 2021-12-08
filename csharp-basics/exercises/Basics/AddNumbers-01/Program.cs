@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AddNumbers_01
 {
@@ -15,7 +11,9 @@ namespace AddNumbers_01
             Console.ReadKey();
         }
 
-        static int AddNumbers(int a int b int c)
-            return a + b + c
+        private static int AddNumbers(int a, int b, int c)
+        {
+            return a + b + c;
+        }
     }
 }

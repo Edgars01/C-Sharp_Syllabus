@@ -4,7 +4,6 @@ namespace ConvertCurrency_14
 {
     class Program
     {
-
         /**
          * Currency Formatting
          *
@@ -13,14 +12,13 @@ namespace ConvertCurrency_14
          * They have also decided that they should add a 1% fee to all foreign transactions
          * Find a way to add 1% to all currency conversions (think about the DRY principle)
          */
-
         static void Main(string[] args)
         {
-
             var product = "learning C sharp";
             var price = 12.5;
-            var priceInUSD = ConvertToUSD(price);
-            var priceInBRL = ConvertToBRL(price);
+            var fee = 1.01;
+            var priceInUSD = ConvertToUSD(price, fee);
+            var priceInBRL = ConvertToBRL(price, fee);
 
             Console.WriteLine("Product: " + product);
             Console.WriteLine("Price in USD: " + priceInUSD);
@@ -29,15 +27,15 @@ namespace ConvertCurrency_14
         }
 
         //change this method accordingly
-        static double ConvertToUSD(double price)
+        static double ConvertToUSD(double price, double fee)
         {
-            return price;
+            return Math.Round(price * 1.4 * fee, 2);
         }
 
         //change this method accordingly
-        static double ConvertToBRL(double price)
+        static double ConvertToBRL(double price, double fee)
         {
-            return price;
+            return Math.Round(price * 6.13 * fee, 2);
         }
     }
 }

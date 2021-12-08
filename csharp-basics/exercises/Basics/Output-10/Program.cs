@@ -8,15 +8,13 @@ namespace Output_10
         //in Main method display the result.
         static void Main(string[] args)
         {
-            var result = Concat("hello", "from", "Codelex");
-
-
+            Console.WriteLine(Concat("word1", "word2", "word3"));
             Console.ReadKey();
         }
 
         static string Concat(string w1, string w2, string w3)
         {
-            return string.Empty;
+            return string.Concat(w1, " ", w2, " ", w3);
         }
     }
 }
