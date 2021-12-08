@@ -12,28 +12,30 @@ namespace FuelConsumptionCalculator
         {
             int startKilometers;
             int liters;
+            Car BatMobile = new Car(0);
             
-            Console.WriteLine();
-
-            Car car = new Car(0);
-            Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 Console.Write("Enter first reading: ");
                 startKilometers = Convert.ToInt32(Console.ReadLine());    
                 Console.Write("Enter liters reading: ");
                 liters = Convert.ToInt32(Console.ReadLine());
-                car.FillUp(startKilometers, liters);
-                
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car1.FillUp(startKilometers, liters);
+                BatMobile.FillUp(startKilometers, liters);
+                BatMobile.FillUp(startKilometers, liters);
+                Console.WriteLine();
             }
 
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
+            Console.WriteLine("Kilometers per liter are " + BatMobile.CalculateConsumption());
+
+            if (BatMobile.GasHog() == false)
+            {
+                Console.WriteLine($"Economic Car {BatMobile.EconomyCar()}");
+            }
+            else
+            {
+                Console.WriteLine($" gasHog: {BatMobile.GasHog()}");
+            }
+            
             Console.ReadKey();
         }
     }
