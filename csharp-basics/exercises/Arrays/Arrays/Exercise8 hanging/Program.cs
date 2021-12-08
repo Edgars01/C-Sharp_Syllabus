@@ -15,23 +15,23 @@ namespace Exercise8_hanging
        
         static void Main(string[] args)
         {
-            play();    
+            Play();    
         }
 
-        private static void play()
+        private static void Play()
         {
-            makeHiddenChars();
+            MakeHiddenChars();
             do
             {
-                display();
-                WinnerCondition();
-                loserCondition();
-                logic();
+                Display();
+                Winner();
+                Looser();
+                Logic();
 
-            } while (WinnerCondition() == false);
+            } while (Winner() == false);
         }
 
-        private static void makeHiddenChars()
+        private static void MakeHiddenChars()
         {
             for (var i = 0; i < myArray[arrayRandom].Length; i++)
             {
@@ -39,40 +39,40 @@ namespace Exercise8_hanging
             }
         }
 
-        private static bool WinnerCondition()
+        private static bool Winner()
         {
             bool win = false;
             if (counter == myArray[arrayRandom].Length)
             {
                 win = true;
                 Console.WriteLine("You WIN");
-                exit();
+                Exit();
             }
             return win;
         }
 
-        private static void loserCondition()
+        private static void Looser()
         {
             if (hitPoints == 0)
             {
                 Console.WriteLine("You LOOSE");
-                exit();
+                Exit();
             }
         }
 
-        private static void exit()
+        private static void Exit()
         {
             Console.Write("Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
             char ch = Console.ReadLine()[0];
-            if (ch == 'n' || ch == 'N')
+            if (char.IsUpper(ch))
             {
                 Environment.Exit(0);
             }
-            play();
+            Play();
         }
 
-        private static void display()
+        private static void Display()
         {
             Console.Clear();
             Console.WriteLine($"{hitPoints} HP left");
@@ -86,25 +86,25 @@ namespace Exercise8_hanging
             Console.Write("Guess: ");
         }
 
-        private static void logic()
+        private static void Logic()
         {       
             string guess = Console.ReadLine();
-            bool guessTest = guess.All(Char.IsLetter);
+            bool isGuessLetter = guess.All(Char.IsLetter);
 
             if (misses.Contains(guess) || unknownChars.Contains(guess))
             {
                 Console.WriteLine("Error! You already wrote this letter");
                 Console.Write("Guess a letter: ");
                 guess = Console.ReadLine();
-                guessTest = guess.All(Char.IsLetter);
+                isGuessLetter = guess.All(Char.IsLetter);
             }        
 
-            while (guessTest == false || guess.Length != 1)
+            while (isGuessLetter == false || guess.Length != 1)
             {
                 Console.WriteLine("Please enter only a single letter!");
                 Console.Write("Guess a letter: ");
                 guess = Console.ReadLine();
-                guessTest = guess.All(Char.IsLetter);
+                isGuessLetter = guess.All(Char.IsLetter);
             }
 
             bool missed = true;
