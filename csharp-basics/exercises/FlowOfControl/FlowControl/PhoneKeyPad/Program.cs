@@ -6,11 +6,12 @@ namespace PhoneKeyPad
     internal class Program
     {
         private static int value;
+
         static void Main(string[] args)
         {
-            menu();
+            Menu();
         }
-        private static void exit()
+        private static void Exit()
         {
             Console.Write("\n\nDo you want to continue (Y/N)? ");
             Console.WriteLine(" ");
@@ -21,10 +22,10 @@ namespace PhoneKeyPad
                 Environment.Exit(0);
             }
             Console.Clear();
-            menu();
+            Menu();
         }
 
-        private static void menu()
+        private static void Menu()
         {
             Console.WriteLine("Hi, please choose: \n");
             Console.WriteLine("   1) a nested -if statement version or ");
@@ -38,16 +39,16 @@ namespace PhoneKeyPad
                 if (value > 3 || value < 1)
                 {
                     Console.WriteLine("Error! Only numbers 1 to 3");
-                    exit();
+                    Exit();
                 }
 
                 if (value == 1)
                 {
-                    nestedIfChoice();
+                    NestedIfChoice();
                 }
                 else if (value == 2)
                 {
-                    switchChoice();
+                    SwitchChoice();
                 }
                 else
                 {
@@ -62,7 +63,7 @@ namespace PhoneKeyPad
             }
         }
 
-        private static void nestedIfChoice()
+        private static void NestedIfChoice()
         {
             Console.Clear();
             Console.WriteLine("Enter text: \n");
@@ -115,10 +116,10 @@ namespace PhoneKeyPad
                 Console.WriteLine("Error! Letters only: ");
                 Console.ReadLine();
             }
-            exit();
+            Exit();
         }
 
-        private static void switchChoice()
+        private static void SwitchChoice()
         {
             Console.Clear();
             Console.WriteLine("Enter text: \n");
@@ -182,7 +183,7 @@ namespace PhoneKeyPad
                     }           
                 }
             }
-            exit();
+            Exit();
         }
     }
 }
