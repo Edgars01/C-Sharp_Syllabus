@@ -71,7 +71,7 @@ Write a C# program to convert minutes into a number of years and days.
 
 ## Exercise #9
 
-Write a C# program to takes the user for a distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds),  and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
+Write a C# program to takes input from user : distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds),  and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
 
 ```
 Test Data

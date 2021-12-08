@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Linq;
 
 namespace Exercise2
 {
     class Program
-    {       
+    {
         // TODO: Write a C# program to sum values of an array.
         // Array values are starting from min (including) till max (including) number. 
         private static void Main(string[] args)
@@ -15,12 +16,8 @@ namespace Exercise2
             Console.WriteLine("Please enter a max number");
             int maxNumber = int.Parse(Console.ReadLine());
 
-            /*
-            fixme
-            for (........) {
-            ........
-            }
-            */
+            int[] sequence = Enumerable.Range(minNumber, maxNumber).ToArray();
+            sum = sequence.Sum();
 
             Console.WriteLine("The sum is " + sum);
             Console.ReadKey();
