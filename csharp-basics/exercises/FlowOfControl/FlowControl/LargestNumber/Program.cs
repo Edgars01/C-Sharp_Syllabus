@@ -5,18 +5,17 @@ namespace LargestNumber
 {
     class Program
     {
-       public static int[] terms = new int[0];
+       private static int[] _terms = new int[0];
        private static int numbOFtim;
 
         static void Main(string[] args)
         {
             Play();
         }
-
         public static void Play()
         {
             Console.WriteLine("Enter number of numbers you wish to input: ");
-            Array.Clear(terms, 0, terms.Length);
+            Array.Clear(_terms, 0, _terms.Length);
             var numberOfTimes = Console.ReadLine();
             if (int.TryParse(numberOfTimes, out numbOFtim))
             {
@@ -43,7 +42,7 @@ namespace LargestNumber
             int value;
             if (int.TryParse(userInput, out value))
             {
-                terms = terms.Append(value).ToArray();
+                _terms = _terms.Append(value).ToArray();
             }
             else
             {
@@ -66,8 +65,8 @@ namespace LargestNumber
 
         private static void BigestNumAndStuff()
         {
-            int maxValue = terms.Max();
-            int maxIndex = terms.ToList().IndexOf(maxValue);
+            int maxValue = _terms.Max();
+            int maxIndex = _terms.ToList().IndexOf(maxValue);
             Console.WriteLine($"Bigest value you entered is: {maxValue}");      
         }
     }
