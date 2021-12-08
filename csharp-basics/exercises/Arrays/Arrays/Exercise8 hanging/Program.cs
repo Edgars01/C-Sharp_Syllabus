@@ -118,6 +118,7 @@ namespace Exercise8_hanging
                     missed = false;
                 }
             }
+
             if (missed)
             {
                 misses += guess;
