@@ -4,7 +4,7 @@ namespace exercise_4
 {
     internal class Program
     {
-        private static int value;
+        private static int _value;
         static void Main(string[] args)
         {
             menu();
@@ -32,19 +32,19 @@ namespace exercise_4
             Console.Write("Enter 1, 2 or 3: ");
 
             var userInput = Console.ReadLine();
-            if (int.TryParse(userInput, out value))
+            if (int.TryParse(userInput, out _value))
             {
-                if (value > 3 || value < 1)
+                if (_value > 3 || _value < 1)
                 { 
                     Console.WriteLine("Error! Only numbers 1 to 3");
                     exit();
                 }
 
-                if (value == 1)
+                if (_value == 1)
                 {
                     nestedIfChoice();
                 }
-                else if (value == 2)
+                else if (_value == 2)
                 {
                     switchChoice();
                 }
@@ -67,33 +67,33 @@ namespace exercise_4
             Console.WriteLine("Hello! Enter 0, 1, ..., 6 for day of week: ");
             var userInput = Console.ReadLine();
 
-            if (int.TryParse(userInput, out value))
+            if (int.TryParse(userInput, out _value))
             {
-                if (value > 6 || value < 0)
+                if (_value > 6 || _value < 0)
                 {
                     Console.WriteLine("Not a valid day");
                 }
-                else if (value == 0)
+                else if (_value == 0)
                 {
                     Console.WriteLine("Monday");
                 }
-                else if (value == 1)
+                else if (_value == 1)
                 {
                     Console.WriteLine("Tuesday");
                 }
-                else if (value == 2)
+                else if (_value == 2)
                 {
                     Console.WriteLine("Wednesday");
                 }
-                else if (value == 3)
+                else if (_value == 3)
                 {
                     Console.WriteLine("Thursday");
                 }
-                else if (value == 4)
+                else if (_value == 4)
                 {
                     Console.WriteLine("Friday");
                 }
-                else if (value == 5)
+                else if (_value == 5)
                 {
                     Console.WriteLine("Saturday");
                 }
