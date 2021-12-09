@@ -6,7 +6,7 @@ namespace LargestNumber
     class Program
     {
        private static int[] _terms = new int[0];
-       private static int numbOFtim;
+       private static int _numbOFtim;
 
         static void Main(string[] args)
         {
@@ -17,9 +17,9 @@ namespace LargestNumber
             Console.WriteLine("Enter number of numbers you wish to input: ");
             Array.Clear(_terms, 0, _terms.Length);
             var numberOfTimes = Console.ReadLine();
-            if (int.TryParse(numberOfTimes, out numbOFtim))
+            if (int.TryParse(numberOfTimes, out _numbOFtim))
             {
-                for (int runs = 0; runs < numbOFtim; runs++)
+                for (int runs = 0; runs < _numbOFtim; runs++)
                 {
                     Logic();
                     Console.Clear();
@@ -54,8 +54,8 @@ namespace LargestNumber
         {
             Console.Write("Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
-            char ch = Console.ReadLine()[0];
-            if (ch == 'n' || ch == 'N')
+            char ch = Console.ReadLine().ToLower()[0];
+            if (ch == 'n')
             {
                 Environment.Exit(0);
             }
