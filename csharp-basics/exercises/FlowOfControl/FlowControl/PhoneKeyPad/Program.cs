@@ -5,18 +5,19 @@ namespace PhoneKeyPad
 {
     internal class Program
     {
-        private static int value;
+        private static int _value;
 
         static void Main(string[] args)
         {
             Menu();
         }
+
         private static void Exit()
         {
             Console.Write("\n\nDo you want to continue (Y/N)? ");
             Console.WriteLine(" ");
-            char ch = Console.ReadLine()[0];
-            if (ch == 'n' || ch == 'N')
+            char ch = Console.ReadLine().ToLower()[0];
+            if (ch == 'n')
             {
                 Console.WriteLine("Bye!");
                 Environment.Exit(0);
@@ -34,19 +35,19 @@ namespace PhoneKeyPad
             Console.Write("Enter 1, 2 or 3: ");
 
             var userInput = Console.ReadLine();
-            if (int.TryParse(userInput, out value))
+            if (int.TryParse(userInput, out _value))
             {
-                if (value > 3 || value < 1)
+                if (_value > 3 || _value < 1)
                 {
                     Console.WriteLine("Error! Only numbers 1 to 3");
                     Exit();
                 }
 
-                if (value == 1)
+                if (_value == 1)
                 {
                     NestedIfChoice();
                 }
-                else if (value == 2)
+                else if (_value == 2)
                 {
                     SwitchChoice();
                 }
