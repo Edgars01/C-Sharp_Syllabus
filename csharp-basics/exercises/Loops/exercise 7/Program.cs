@@ -30,7 +30,7 @@ namespace Exercise7_PIGLET
                     {
                         _score = 0;
                         Console.WriteLine($"    GameOver {_score}");
-                        exit();
+                        Exit();
                     }
                 }
                 else
@@ -38,15 +38,15 @@ namespace Exercise7_PIGLET
                     Environment.Exit(0);
                 }
             } while (_score != 0);
-            exit();
+            Exit();
         }
 
-        private static void exit()
+        private static void Exit()
         {
             Console.Write("    Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
-            char ch = Console.ReadLine()[0];
-            if (char.IsLower(ch) || char.IsUpper(ch))
+            char ch = Console.ReadLine().ToLower()[0];
+            if (ch == 'n')
             {
                 Environment.Exit(0);
             }
