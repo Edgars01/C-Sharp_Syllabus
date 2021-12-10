@@ -4,21 +4,21 @@ namespace Exercise10
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Enter number 1");
-            int min = Convert.ToInt32(Console.ReadLine());
+            var min = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter number 2");
-            int max = Convert.ToInt32(Console.ReadLine());
+            var max = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = min; i <= max; i++)
+            for (var i = min; i < max; i++)
             {
-                for (int j = i; j <= max; j++)
+                for (var j = i; j < max; j++)
                 {
                     Console.Write(j);
                 }
 
-                for (int j = min; j < i; j++)
+                for (var j = min; j < i; j++)
                 {
                     Console.Write(j);
                 }
