@@ -24,11 +24,11 @@ namespace Exercise8_hanging
             do
             {
                 Display();
-                Winner();
+                isWinner();
                 Looser();
                 Logic();
 
-            } while (Winner() == false);
+            } while (!isWinner());
         }
 
         private static void MakeHiddenChars()
@@ -39,7 +39,7 @@ namespace Exercise8_hanging
             }
         }
 
-        private static bool Winner()
+        private static bool isWinner()
         {
             bool win = false;
             if (counter == myArray[arrayRandom].Length)
