@@ -64,8 +64,8 @@ namespace Exercise8_hanging
         {
             Console.Write("Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
-            char ch = Console.ReadLine().ToLower()[0];
-            if (ch == 'n')
+            char ch = Console.ReadLine()[0];
+            if (char.IsUpper(ch))
             {
                 Environment.Exit(0);
             }
