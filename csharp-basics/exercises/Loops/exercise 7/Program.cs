@@ -17,8 +17,8 @@ namespace Exercise7_PIGLET
             do
             {
                 Console.WriteLine("    Roll? Y/N");
-                char ch = Console.ReadLine()[0];
-                if (ch == 'y' || ch == 'Y')
+                char ch = Console.ReadLine().ToUpper()[0];
+                if (ch == 'Y')
                 {
                     int roll = _rnd.Next(1, 5);
                     _score += roll;
