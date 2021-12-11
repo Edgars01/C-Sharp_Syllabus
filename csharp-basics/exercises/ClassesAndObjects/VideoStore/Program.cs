@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace VideoStore
 {
@@ -14,14 +15,14 @@ namespace VideoStore
         {
             while (true)
             {
-                Console.WriteLine("Choose the operation you want to perform ");
-                Console.WriteLine("Choose 0 for EXIT");
-                Console.WriteLine("Choose 1 to fill video store");
-                Console.WriteLine("Choose 2 to rent video (as user)");
-                Console.WriteLine("Choose 3 to return video (as user)");
-                Console.WriteLine("Choose 4 to list inventory");
+                WriteLine("Choose the operation you want to perform ");
+                WriteLine("Choose 0 for EXIT");
+                WriteLine("Choose 1 to fill video store");
+                WriteLine("Choose 2 to rent video (as user)");
+                WriteLine("Choose 3 to return video (as user)");
+                WriteLine("Choose 4 to list inventory");
 
-                int n = Convert.ToByte(Console.ReadLine());
+                int n = Convert.ToByte(ReadLine());
 
                 switch (n)
                 {
@@ -42,6 +43,7 @@ namespace VideoStore
                     default:
                         return;
                 }
+                Clear();
             }
         }
 
@@ -54,11 +56,11 @@ namespace VideoStore
         {
             for (var i = 0; i < _countOfMovies; i++)
             {
-                Console.WriteLine("Enter movie name");
-                string movieName = Console.ReadLine();
+                WriteLine("Enter movie name");
+                var movieName = ReadLine();
 
-                Console.WriteLine("Enter rating");
-                int rating = Convert.ToInt16(Console.ReadLine());
+                WriteLine("Enter rating");
+                int rating = Convert.ToInt16(ReadLine());
 
                 _videoStore.AddVideo(movieName);
                 _videoStore.TakeUsersRating(rating, movieName);
@@ -67,15 +69,15 @@ namespace VideoStore
 
         private static void RentVideo()
         {
-            Console.WriteLine("Enter movie name");
-            string movieName = Console.ReadLine();
+            WriteLine("Enter movie name");
+            var movieName = ReadLine();
             _videoStore.Checkout(movieName);
         }
 
         private static void ReturnVideo()
         {
-            Console.WriteLine("Enter movie name");
-            string movieName = Console.ReadLine();
+            WriteLine("Enter movie name");
+            var movieName = ReadLine();
             _videoStore.ReturnVideo(movieName);
         }
     }
