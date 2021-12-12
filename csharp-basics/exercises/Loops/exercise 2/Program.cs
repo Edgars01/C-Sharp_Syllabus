@@ -9,7 +9,7 @@ namespace Exercise2
             Console.WriteLine("Input number of terms : ");
             int n = Convert.ToInt32(Console.ReadLine());
             
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine(i * i);
             }
