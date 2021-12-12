@@ -4,10 +4,10 @@ namespace Exercise7_PIGLET
 {
     internal class Program
     {
-        private static Random _rnd = new Random();
-        private static int _score = 0;
+        private static readonly Random _rnd = new();
+        private static int _score;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Play();
         }
@@ -17,10 +17,10 @@ namespace Exercise7_PIGLET
             do
             {
                 Console.WriteLine("    Roll? Y/N");
-                char ch = Console.ReadLine().ToUpper()[0];
+                var ch = Console.ReadLine().ToUpper()[0];
                 if (ch == 'Y')
                 {
-                    int roll = _rnd.Next(1, 5);
+                    var roll = _rnd.Next(1, 5);
                     _score += roll;
                     Console.Clear();
                     Console.WriteLine($"    You rolled : {roll}.");
@@ -38,6 +38,7 @@ namespace Exercise7_PIGLET
                     Environment.Exit(0);
                 }
             } while (_score != 0);
+
             Exit();
         }
 
@@ -45,11 +46,9 @@ namespace Exercise7_PIGLET
         {
             Console.Write("    Do you want to continue (Y/N)? ");
             Console.WriteLine(" ");
-            char ch = Console.ReadLine().ToLower()[0];
-            if (ch == 'n')
-            {
-                Environment.Exit(0);
-            }
+            var ch = Console.ReadLine().ToLower()[0];
+            if (ch == 'n') Environment.Exit(0);
+
             Console.Clear();
             Play();
         }
