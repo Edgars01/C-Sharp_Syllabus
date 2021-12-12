@@ -9,11 +9,11 @@ namespace FlightPlanner
     public class Flights
     {
         private const string _path = "../../flights.txt";
-        public static List<string> roundTripFlight = new List<string>();
-        public static string[] readFileFromPath = File.ReadAllLines(_path);
-        public static Dictionary<string, string> possibleRoutes = GetNextFlight(readFileFromPath);
+        public static List<string> RoundTripFlight = new List<string>();
+        public static string[] ReadFileFromPath = File.ReadAllLines(_path);
+        public static Dictionary<string, string> PossibleRoutes = GetNextFlight(ReadFileFromPath);
 
-        public static string[][] array = File.ReadAllLines(_path)
+        public static string[][] Array = File.ReadAllLines(_path)
             .Select(x => x.Replace(" -> ", "-").Split('-'))
             .ToArray();
 
@@ -26,15 +26,15 @@ namespace FlightPlanner
 
             do
             {
-                roundTripFlight.Add(flyTo);
+                RoundTripFlight.Add(flyTo);
                 Write("\nSelect the next city : ");
-                WriteLine(possibleRoutes[flyTo]);
+                WriteLine(PossibleRoutes[flyTo]);
                 Write("\nSelect the next city : ");
                 var userChoice = UserChoice();
                 flyTo = userChoice;
             } while (flyFrom != flyTo);
 
-            WriteLine($"\nroute that was chosen: {string.Join(" then ", roundTripFlight)} to {flyTo}");
+            WriteLine($"\nroute that was chosen: {string.Join(" then ", RoundTripFlight)} to {flyTo}");
             ReadKey();
         }
 
@@ -52,6 +52,7 @@ namespace FlightPlanner
                 else
                     routes.Add(cityToAdd, destinationToAdd);
             }
+            foreach (var route in routes) WriteLine($"\n{route.Key}:{route.Value}");
 
             return routes;
         }
@@ -61,14 +62,14 @@ namespace FlightPlanner
             var dictionary = new Dictionary<int, string>();
             while (true)
             {
-                WriteLine(" What would you like to do:\n");
+                WriteLine("\n\n What would you like to do:\n");
                 WriteLine(" To display list of the cities press 1");
                 WriteLine(" To exit program press #");
                 var input = ReadLine();
                 switch (input)
                 {
                     case "1":
-                        DisplayCities(dictionary, array);
+                        DisplayCities(dictionary, Array);
                         break;
                     case "#":
                         WriteLine(" Exiting...");
