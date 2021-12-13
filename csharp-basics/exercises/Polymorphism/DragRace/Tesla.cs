@@ -2,18 +2,19 @@ using System;
 
 namespace DragRace
 {
-    public class Tesla
+    public class Tesla : ICar
     {
         private int currentSpeed = 0;
+        private string _name = "TESLA";
 
         public void SpeedUp() 
         {
-            currentSpeed;
+            currentSpeed += 85;
         }
 
         public void SlowDown() 
         {
-            currentSpeed;
+            currentSpeed += 85;
         }
 
         public string ShowCurrentSpeed() 
@@ -23,7 +24,12 @@ namespace DragRace
 
         public void StartEngine() 
         {
-            Console.WriteLine("-- silence ---");
+            Console.WriteLine(" TESLA onomatopoeia ------------------- is it on?");
+        }
+
+        public string GetName()
+        {
+            return _name;
         }
     }
 }
