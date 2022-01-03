@@ -18,13 +18,13 @@
             return $"{_name}, price {_priceAtStart}, amount {_amountAtStart}";
         }
 
-        public int changeQuantity(int newAmount)
+        public int ChangeQuantity(int newAmount)
         {
             _amountAtStart = newAmount;
             return newAmount;
         }
 
-        public double changePrice(double newPrice)
+        public double ChangePrice(double newPrice)
         {
             _priceAtStart = newPrice;
             return newPrice;

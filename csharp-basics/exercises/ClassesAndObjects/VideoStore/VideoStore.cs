@@ -15,22 +15,14 @@ namespace VideoStore
         
         public void Checkout(string title)
         {
+            var ifThereIsVideoAvailableThisWillBeNotNull = from t in _store
+                where t.Title == title && t._available
+                select t;
             foreach (var t in _store)
             {
-                if (t.Title == title && t._available == true)
-                {
-                    t.BeingCheckedOut();
-                }
-                else if (t.Title == title && t._available == false)
-                {
-                    Console.WriteLine("Sorry, currently rented out");
-                    Console.ReadKey();
-                }
-                else
-                {
-                    Console.WriteLine("Wrong input");
-                    Console.ReadKey();
-                }
+                if (ifThereIsVideoAvailableThisWillBeNotNull != null) t.BeingCheckedOut();
+                Console.WriteLine("Sorry, currently rented out");
+                Console.ReadKey();
             }
         }
 
