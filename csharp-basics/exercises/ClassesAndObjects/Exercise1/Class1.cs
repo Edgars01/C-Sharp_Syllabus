@@ -14,8 +14,8 @@ namespace Exercise1
             Console.WriteLine(product2.PrintProduct());
             Console.WriteLine(product3.PrintProduct());
 
-            product1.changePrice(3);
-            product1.changeQuantity(50);
+            product1.ChangePrice(3);
+            product1.ChangeQuantity(50);
             Console.WriteLine(product1.PrintProduct());
 
             Console.ReadLine();
