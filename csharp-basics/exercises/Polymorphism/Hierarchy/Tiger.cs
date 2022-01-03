@@ -27,8 +27,7 @@ namespace Hierarchy
 
         public override string ReturnInfo()
         {
-            var result = base.ReturnInfo();
-            return result;
+            return base.ReturnInfo(); 
         }
     }
 }
