@@ -2,8 +2,8 @@
 {
     public class Account
     {
-        public string _userAccountName;
-        public decimal _userAccountBalance;
+        private string _userAccountName;
+        private decimal _userAccountBalance;
 
         public Account(string userAccountName, decimal userAccountBalance)
         {
