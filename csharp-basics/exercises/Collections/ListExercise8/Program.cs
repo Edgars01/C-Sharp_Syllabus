@@ -7,8 +7,6 @@ namespace ListExercise8
     {
         static void Main(string[] args)
         {
-            //TODO: Write a C# program to sort a given list.
-
             var colors = new List<string>
             {
                 "Red",
@@ -20,14 +18,9 @@ namespace ListExercise8
 
             Console.Write("List before sort: ");
             Console.WriteLine(string.Join(",", colors));
-
-            //TODO: Sort list
-            //Collections....
             colors.Sort();
-
             Console.Write("List after sort: ");
             Console.WriteLine(string.Join(",", colors));
-
             Console.ReadKey();
         }
     }
