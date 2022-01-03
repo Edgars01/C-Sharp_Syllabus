@@ -7,8 +7,6 @@ namespace ListExercise2
     {
         private static void Main(string[] args)
         {
-            //TODO: Write a C# program to iterate through all elements in a list.
-
             var colors = new List<string>();
             colors.Add("Red");
             colors.Add("Green");
