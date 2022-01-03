@@ -16,8 +16,11 @@ namespace Account
             var test1 = new Account("A", (decimal)100.0);
             var test2 = new Account("B", (decimal)0.0);
             var test3 = new Account("C", (decimal)0.0);
+
             Transfer(test1, test2, 50);
+
             Transfer(test1, test3, 25);
+
             Console.WriteLine(test1.ToString());
             Console.WriteLine(test2.ToString());
             Console.WriteLine(test3.ToString());
@@ -26,6 +29,7 @@ namespace Account
         public static void Transfer(Account from, Account to, decimal howMuch)
         {
             from.Withdrawal(howMuch);
+
             to.Deposit(howMuch);
         }
     }
