@@ -7,7 +7,7 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            string fileLocation = File.ReadAllText(@"C:\Users\gbhui\Desktop\Projects\C-sharp-basic\C-Sharp_Syllabus\csharp-basics\exercises\Collections\WordCount\lear.txt");
+            string fileLocation = File.ReadAllText("../../lear.txt");
             int lineCount = fileLocation.Split('\n').Length;
             int wrd = 1;
             for (int i = 0; i <= fileLocation.Length - 1; i++) {              
