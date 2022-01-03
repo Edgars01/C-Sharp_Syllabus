@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AdApp
+﻿namespace AdApp
 {
     internal class Poster : Advert
     {
         private int _daysOld;
         private int _fee;
         
-
         public Poster(int fee, int daysOld) : base(fee)
         {
             _fee = fee;
