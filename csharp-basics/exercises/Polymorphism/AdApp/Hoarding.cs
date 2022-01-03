@@ -12,7 +12,6 @@ namespace AdApp
         }
         public Hoarding(int fee, int days, int surCharge, bool primeLocation = false) : base(fee)
         {
-
             _numDays = days;
             _surCharge = surCharge;
             _isPrimeLocation = primeLocation;
