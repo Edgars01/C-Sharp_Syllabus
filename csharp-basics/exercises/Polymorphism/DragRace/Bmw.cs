@@ -2,28 +2,34 @@ using System;
 
 namespace DragRace
 {
-    public class Bmw
+    public class Bmw : ICar
     {
-        private int currentSpeed = 0;
+        private int currentSpeed;
+        private readonly string _name = "bmw";
 
-        public void SpeedUp() 
+        public void SpeedUp()
         {
-            currentSpeed;
+            currentSpeed += 6;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
-            currentSpeed;
+            currentSpeed += 6;
         }
 
-        public string ShowCurrentSpeed() 
+        public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
 
-        public void StartEngine() 
+        public void StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            Console.WriteLine(" bmw onomatopoeia - brubmmmmMMMbruMMMMMMMMMMMMtututuututUTUtuutututu");
+        }
+
+        public string GetName()
+        {
+            return _name;
         }
     }
 }
