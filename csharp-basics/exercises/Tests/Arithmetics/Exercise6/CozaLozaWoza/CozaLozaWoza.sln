@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CozaLozaWoza", "CozaLozaWoza\CozaLozaWoza.csproj", "{7EA15F0C-4587-417E-A4FE-62D1821D6D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CozaLozaWoza.Tests", "CozaLozaWoza.Tests\CozaLozaWoza.Tests.csproj", "{02BC4D2F-3C98-4667-9F42-1E5B04B63BBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EA15F0C-4587-417E-A4FE-62D1821D6D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA15F0C-4587-417E-A4FE-62D1821D6D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA15F0C-4587-417E-A4FE-62D1821D6D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA15F0C-4587-417E-A4FE-62D1821D6D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BC4D2F-3C98-4667-9F42-1E5B04B63BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BC4D2F-3C98-4667-9F42-1E5B04B63BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BC4D2F-3C98-4667-9F42-1E5B04B63BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BC4D2F-3C98-4667-9F42-1E5B04B63BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D15C1722-39B4-4562-9AE2-85CEC9C3FFF7}
+	EndGlobalSection
+EndGlobal
