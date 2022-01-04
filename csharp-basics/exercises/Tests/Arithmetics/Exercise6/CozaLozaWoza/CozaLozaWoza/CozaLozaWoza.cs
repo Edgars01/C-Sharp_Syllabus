@@ -1,12 +1,13 @@
-﻿namespace CozaLozaWoza
+﻿using System;
+
+namespace CozaLozaWoza
 {
     public class CozaLozaWoza : ICozaLozaWoza
     {
         public int Brain(int number)
         {
             while (number <= 110)
-                for (var counter = 1; counter <= 11; counter++)
-                    Conditions(number);
+                Conditions(number);
 
             return number;
         }
@@ -21,6 +22,10 @@
                 return "Loza ";
             if (number % 7 == 0)
                 return "Woza ";
+            if (number % 11 == 0)
+            {
+                return Environment.NewLine + number;
+            }
             return number + " ";
         }
     }

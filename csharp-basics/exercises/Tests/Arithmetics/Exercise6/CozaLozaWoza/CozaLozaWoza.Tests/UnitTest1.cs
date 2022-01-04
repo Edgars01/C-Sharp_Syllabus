@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace CozaLozaWoza.Tests
@@ -59,6 +60,13 @@ namespace CozaLozaWoza.Tests
         {
             string expectedResult = "LozaCoza ";
             Assert.AreEqual(expectedResult, _target.Conditions(35));
+        }
+
+        [Test]
+        public void Test()
+        {
+            string expectedResult = Environment.NewLine + "11";
+            Assert.AreEqual(expectedResult, _target.Conditions(11));
         }
     }
 }
