@@ -1,0 +1,5 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\gbhui\AppData\Local\Temp\JetBrains\ReSharperPlatformVs17\vAny_95b81dfe\CoverageData\_PhoneBook.1218104894\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4b12e764_002D7772_002D4acf_002D9db3_002De7a7712f7007/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;4E73A991-B7CC-4B72-9EEF-B18570023677/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
