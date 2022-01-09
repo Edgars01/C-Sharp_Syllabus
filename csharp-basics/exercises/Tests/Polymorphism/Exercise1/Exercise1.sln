@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragRace", "Exercise1\DragRace.csproj", "{C60EA81B-6202-4EB8-876B-2847F7F6F906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragRace.Tests", "Exercise1.Tests\DragRace.Tests.csproj", "{B3F8899D-A8F9-42D9-ACF3-9257389CDEEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C60EA81B-6202-4EB8-876B-2847F7F6F906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60EA81B-6202-4EB8-876B-2847F7F6F906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60EA81B-6202-4EB8-876B-2847F7F6F906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60EA81B-6202-4EB8-876B-2847F7F6F906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F8899D-A8F9-42D9-ACF3-9257389CDEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F8899D-A8F9-42D9-ACF3-9257389CDEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F8899D-A8F9-42D9-ACF3-9257389CDEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F8899D-A8F9-42D9-ACF3-9257389CDEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CF14377-629C-4A5F-8A9A-D853C3814E58}
+	EndGlobalSection
+EndGlobal
