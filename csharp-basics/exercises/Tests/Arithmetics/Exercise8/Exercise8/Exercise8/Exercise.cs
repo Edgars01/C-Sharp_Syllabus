@@ -16,13 +16,9 @@ namespace Exercise8
             double maxHours = 60;
             double totalSalary;
             if (pay < minimumWage) throw new InvalidWageException();
-
             if (hours > maxHours) throw new InvalidHoursException();
-
-            if (hours > 40)
-                totalSalary = pay * 40 + 1.5 * pay * (hours - 40);
-            else
-                totalSalary = pay * hours;
+            if (hours > 40) totalSalary = pay * 40 + 1.5 * pay * (hours - 40);
+            else totalSalary = pay * hours;
 
             return (int) Math.Floor(totalSalary);
         }
