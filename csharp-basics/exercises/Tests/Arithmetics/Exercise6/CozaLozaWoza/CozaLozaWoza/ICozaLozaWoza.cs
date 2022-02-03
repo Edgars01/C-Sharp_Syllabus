@@ -2,7 +2,7 @@
 {
     public interface ICozaLozaWoza
     {
-        public string Conditions(int count);
+        public string DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(int count);
 
         public int Brain(int count);
     }

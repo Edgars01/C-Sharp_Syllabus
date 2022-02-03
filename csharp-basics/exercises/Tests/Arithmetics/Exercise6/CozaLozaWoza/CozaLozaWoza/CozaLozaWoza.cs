@@ -7,12 +7,12 @@ namespace CozaLozaWoza
         public int Brain(int number)
         {
             while (number <= 110)
-                Conditions(number);
+                DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(number);
 
             return number;
         }
 
-        public string Conditions(int number)
+        public string DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(int number)
         {
             if (number % 3 == 0 && number % 5 == 0) return "CozaLoza ";
             else if (number % 5 == 0 && number % 7 == 0) return "LozaCoza ";
