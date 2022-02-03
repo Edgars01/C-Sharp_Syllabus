@@ -8,18 +8,17 @@ namespace Fifteen
         public List<int> numbers;
         private int _number = 15;
 
-        public void AddAnB(int a, int b)
+        public void CheckingIfNumbersProvidedAreSmallerThanZero_OrTheirSumExceeds_15(int a, int b)
         {
             if (a < 0 || b < 0 || a + b > 15) throw new InvalidNumberException();
-
         }
 
-        public bool IsSumValidAdding(int a, int b)
+        public bool CheckingIfProvidedNumberSumIsEqualTo_15(int a, int b)
         {
             return a + b == _number;
         }
 
-        public bool IsSumValidMinus(int a, int b)
+        public bool CheckingIfProvidedNumberMinusOtherNumberIsEqualTo_15(int a, int b)
         {
             return a - b == _number || b - a == _number;
         }

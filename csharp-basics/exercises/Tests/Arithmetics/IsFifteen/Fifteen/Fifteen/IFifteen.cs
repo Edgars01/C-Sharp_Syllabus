@@ -2,9 +2,9 @@
 {
     public interface IFifteen
     {
-        void AddAnB(int a, int b);
-        bool IsSumValidAdding(int a, int b);
+        void CheckingIfNumbersProvidedAreSmallerThanZero_OrTheirSumExceeds_15(int a, int b);
+        bool CheckingIfProvidedNumberSumIsEqualTo_15(int a, int b);
 
-        bool IsSumValidMinus(int a, int b);
+        bool CheckingIfProvidedNumberMinusOtherNumberIsEqualTo_15(int a, int b);
     }
 }

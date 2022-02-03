@@ -17,7 +17,7 @@ namespace Fifteen.Tests
         public void Adding_15_and_0_ShouldPass()
         {   
             // Arrange
-            _target.IsSumValidAdding(15, 0);
+            _target.CheckingIfProvidedNumberSumIsEqualTo_15(15, 0);
 
 
             // Assert
@@ -28,7 +28,7 @@ namespace Fifteen.Tests
         public void Adding_0_and_15_ShouldPass()
         {
             // Arrange
-            _target.IsSumValidAdding(0, 15);
+            _target.CheckingIfProvidedNumberSumIsEqualTo_15(0, 15);
 
 
             // Assert
@@ -39,7 +39,7 @@ namespace Fifteen.Tests
         public void Adding_7_and_8_ShouldPass()
         {
             // Arrange
-            _target.IsSumValidAdding(7, 8);
+            _target.CheckingIfProvidedNumberSumIsEqualTo_15(7, 8);
 
             // Assert
             Assert.Pass();
@@ -49,7 +49,7 @@ namespace Fifteen.Tests
         public void ValueMinusValueIs15_ShouldPass()
         {
             // Arrange
-            _target.IsSumValidMinus(16, 1);
+            _target.CheckingIfProvidedNumberMinusOtherNumberIsEqualTo_15(16, 1);
 
             // Assert
             Assert.Pass();
@@ -59,14 +59,14 @@ namespace Fifteen.Tests
         public void AddingNegativeValue_ShouldNotPass()
         {
             // Act
-            Assert.Throws<InvalidNumberException>(() => _target.AddAnB(-2, 7));
+            Assert.Throws<InvalidNumberException>(() => _target.CheckingIfNumbersProvidedAreSmallerThanZero_OrTheirSumExceeds_15(-2, 7));
         }
 
         [Test]
         public void AddingValuesThatSumIsBiggerThan15_ShouldNotPass()
         {
             // Act
-            Assert.Throws<InvalidNumberException>(() => _target.AddAnB(15, 90));
+            Assert.Throws<InvalidNumberException>(() => _target.CheckingIfNumbersProvidedAreSmallerThanZero_OrTheirSumExceeds_15(15, 90));
         }
     }
 }
