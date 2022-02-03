@@ -4,7 +4,7 @@ namespace CozaLozaWoza
 {
     public class CozaLozaWoza : ICozaLozaWoza
     {
-        public int Brain(int number)
+        public int Do_DecidingMethodTillConditionIsMet(int number)
         {
             while (number <= 110)
                 DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(number);
