@@ -12,13 +12,10 @@ namespace OddEven
 
         public string IsOddOrEven(int number)
         {
-            if (number < 0)
-            {
-                throw new InvalidValueException();
-            }
+            if (number < 0) throw new InvalidValueException();
+
             var result = CheckOdd(number);
             return result == true ? "Even" : "Odd";
         }
-        
     }
 }
