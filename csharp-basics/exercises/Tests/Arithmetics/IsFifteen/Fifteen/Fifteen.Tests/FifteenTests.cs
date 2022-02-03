@@ -19,7 +19,6 @@ namespace Fifteen.Tests
             // Arrange
             _target.CheckingIfProvidedNumberSumIsEqualTo_15(15, 0);
 
-
             // Assert
             Assert.Pass();
         }
@@ -29,7 +28,6 @@ namespace Fifteen.Tests
         {
             // Arrange
             _target.CheckingIfProvidedNumberSumIsEqualTo_15(0, 15);
-
 
             // Assert
             Assert.Pass();
