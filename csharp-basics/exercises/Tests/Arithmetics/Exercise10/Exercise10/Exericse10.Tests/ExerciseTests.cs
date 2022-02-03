@@ -1,4 +1,3 @@
-using System.Runtime.Serialization.Formatters;
 using Exercise10;
 using Exercise10.Exceptoon;
 using NUnit.Framework;
@@ -16,53 +15,64 @@ namespace Exericse10.Tests
         }
 
         [Test]
-        public void AreaOfCircleShouldBeBiggerThanOne()
+        public void AreaOfCircleTest_IncorrectRadius_ShouldReturnException()
         {
+            //Assert
             Assert.Throws<IncorrectAreaOfCircleException>(() => _target.AreaOfCircle(0));
         }
 
         [Test]
-        public void AreaOfRectangle_Width_ShouldBeBiggerThanOne()
+        public void AreaOfRectangleTest_IncorrectLengthWidth_ShouldReturnException()
         {
+            //Assert
             Assert.Throws<IncorrectAreaOfRectangleException>(() => _target.AreaOfRectangle(2, 0));
         }
 
         [Test]
-        public void AreaOfRectangle_Length_ShouldBeBiggerThanOne()
+        public void AreaOfRectangleTest_IncorrectLength_ShouldReturnException()
         {
+            //Assert
             Assert.Throws<IncorrectAreaOfRectangleException>(() => _target.AreaOfRectangle(0, 2));
         }
 
         [Test]
-        public void AreaOfTriangle_Ground_ShouldBeBiggerThanOne()
+        public void AreaOfTriangleTest_IncorrectGround_ShouldReturnException()
         {
+            //Assert
             Assert.Throws<IncorrectAreaOfTriangleException>(() => _target.AreaOfTriangle(0, 2));
         }
 
         [Test]
-        public void AreaOfTriangle_Height_ShouldBeBiggerThanOne()
+        public void AreaOfTriangleTest_IncorrectHeight_ShouldReturnException()
         {
+            //Assert
             Assert.Throws<IncorrectAreaOfTriangleException>(() => _target.AreaOfTriangle(2, 0));
         }
 
         [Test]
-        public void ShouldBeAbleToCalculateTheAreaOfACircle()
+        public void AreaOfCircleTest_radiusWithValue5_ShouldArea78point5()
         {
-            double expected = 78.5;
+            //Arrange
+            var expected = 78.5;
+            //Assert
             Assert.AreEqual(expected, _target.AreaOfCircle(5));
         }
 
         [Test]
-        public void ShouldBeAbleToCalculateTheAreaOfRectangle()
+        public void AreaOfRectangleTest_length5Width6_ShouldReturnArea30()
         {
-            double expected = 30;
+            //Arrange
+            var expected = 30;
+            //Assert
             Assert.AreEqual(expected, _target.AreaOfRectangle(5, 6));
         }
 
         [Test]
-        public void ShouldBeAbleToCalculateTheAreaOfTriangle()
+        public void AreaOfTriangleTest_Ground7Height12_ShouldReturnArea42()
         {
-            double expected = 42;
+            //Arrange
+            var expected = 42;
+            //Assert
             Assert.AreEqual(expected, _target.AreaOfTriangle(7, 12));
         }
     }

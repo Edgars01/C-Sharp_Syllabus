@@ -8,7 +8,7 @@ namespace Exercise10
         public double AreaOfCircle(double radius)
         {
             if (radius < 1) throw new IncorrectAreaOfCircleException();
-            return 3.14 * radius * radius;
+            return 3.14 * Math.Sqrt(radius);
         }
 
         public double AreaOfRectangle(double length, double width)
