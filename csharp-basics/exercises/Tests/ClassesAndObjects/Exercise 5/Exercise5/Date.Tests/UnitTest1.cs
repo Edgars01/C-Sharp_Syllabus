@@ -16,10 +16,10 @@ namespace Date.Tests
         [Test]
         public void DisplayDate_ProvidingExpectedDate_ShouldBeEqualToResult()
         {
+            //Arrange
             const string expected = "1 / 1 / 1";
-
             var actual = _target.DisplayDate();
-
+            //Assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -29,6 +29,7 @@ namespace Date.Tests
         [TestCase(333, 1, 9090)]
         public void ShouldBeAbleToShowExceptionOnWrongDateInput(int month, int day, int year)
         {
+            //Assert
             Assert.Throws<InvalidDateException>(() => new Exercise5.Date(-1, -1, -1));
         }
     }
