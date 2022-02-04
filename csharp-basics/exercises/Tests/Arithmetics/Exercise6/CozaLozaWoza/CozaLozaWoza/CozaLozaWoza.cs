@@ -4,15 +4,15 @@ namespace CozaLozaWoza
 {
     public class CozaLozaWoza : ICozaLozaWoza
     {
-        public int Do_DecidingMethodTillConditionIsMet(int number)
+        public int DoTillConditionIsMet(int number)
         {
             while (number <= 110)
-                DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(number);
+                ConvertToCozaLozaWozaElement(number);
 
             return number;
         }
 
-        public string DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(int number)
+        public string ConvertToCozaLozaWozaElement(int number)
         {
             if (number % 3 == 0 && number % 5 == 0) return "CozaLoza ";
             else if (number % 5 == 0 && number % 7 == 0) return "LozaCoza ";

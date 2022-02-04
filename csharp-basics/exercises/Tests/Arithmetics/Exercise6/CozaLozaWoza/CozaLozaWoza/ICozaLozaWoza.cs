@@ -2,8 +2,8 @@
 {
     public interface ICozaLozaWoza
     {
-        public string DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(int count);
+        public string ConvertToCozaLozaWozaElement(int count);
 
-        public int Do_DecidingMethodTillConditionIsMet(int count);
+        public int DoTillConditionIsMet(int count);
     }
 }

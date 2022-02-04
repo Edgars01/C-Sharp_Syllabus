@@ -19,7 +19,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "1 ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(1));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(1));
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "Loza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(110));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(110));
         }
 
         [Test]
@@ -37,7 +37,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "Woza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(7));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(7));
         }
 
         [Test]
@@ -46,7 +46,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "Loza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(5));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(5));
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "Coza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(3));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(3));
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "CozaLoza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(15));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(15));
         }
 
         [Test]
@@ -73,7 +73,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = "LozaCoza ";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(35));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(35));
         }
 
         [Test]
@@ -82,7 +82,7 @@ namespace CozaLozaWoza.Tests
             //Arrange
             string expectedResult = Environment.NewLine + "11";
             //Assert
-            Assert.AreEqual(expectedResult, _target.DecidingIfNumberIsChangedInto_3_5_7_AndWhenToMakeNewLine(11));
+            Assert.AreEqual(expectedResult, _target.ConvertToCozaLozaWozaElement(11));
         }
     }
 }
