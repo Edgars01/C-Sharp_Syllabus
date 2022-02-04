@@ -14,7 +14,7 @@ namespace Account.Tests
         }
 
         [Test]
-        public void ShouldBeAbleToGiveNameToAccount()
+        public void Name_ExpectedShouldBe_EqualToActual()
         {
             var expected = "Gallus Eberhard";
 
@@ -32,7 +32,7 @@ namespace Account.Tests
         }
 
         [Test]
-        public void ShouldBeAbleToDeposit()
+        public void Deposit_10_BalanceShouldHaveValueOf10()
         {
             var expected = 10000010;
 
@@ -44,7 +44,7 @@ namespace Account.Tests
         }
 
         [Test]
-        public void ShouldBeAbleToWithdrawal()
+        public void Withdrawal_StartingAmount10000000Withdraw1_ExpectedValue9999999()
         {
             var expected = 9999999;
 
