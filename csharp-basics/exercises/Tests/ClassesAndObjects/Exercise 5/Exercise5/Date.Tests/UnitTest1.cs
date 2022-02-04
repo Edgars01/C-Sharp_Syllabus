@@ -14,7 +14,7 @@ namespace Date.Tests
         }
 
         [Test]
-        public void ShouldBeAbleToShowDate()
+        public void DisplayDate_ProvidingExpectedDate_ShouldBeEqualToResult()
         {
             const string expected = "1 / 1 / 1";
 
@@ -31,10 +31,5 @@ namespace Date.Tests
         {
             Assert.Throws<InvalidDateException>(() => new Exercise5.Date(-1, -1, -1));
         }
-
-
-
-
-
     }
 }
