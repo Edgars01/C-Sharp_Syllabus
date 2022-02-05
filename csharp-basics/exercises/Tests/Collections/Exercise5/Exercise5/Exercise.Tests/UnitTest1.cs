@@ -18,29 +18,31 @@ namespace Exercise5.Tests
         }
 
         [Test]
-        public void TextFileShouldNotBeEmpty()
+        public void CharCountInFile_EmptyFile_ShouldFail()
         {
+            //Assert
             Assert.Throws<System.IO.FileNotFoundException>(() => _target.CharCountInFile(null));
         }
 
         [Test]
-        public void TextFileShouldReturnCharCount()
+        public void CharCountInFile_460CharsInFile_ShouldBeEqualToExpected()
         {
+            //Assert
             Assert.AreEqual(460, _target.CharCountInFile(FileLocation));
         }
 
         [Test]
-        public void ShouldBeAbleToGetWordCount()
+        public void WordCount_74WordsInFile_ShouldBeEqualToExpected()
         {
-
+            //Assert
             Assert.AreEqual(74, _target.WordCount(FileLocation));
         }
 
         [Test]
-        public void ShouldBeAbleToGetLineCount()
+        public void LineCount_8WordsInFile_ShouldBeEqualToExpected()
         {
+            //Assert
             Assert.AreEqual(8, _target.LineCount(FileLocation));
         }
-
     }
 }
