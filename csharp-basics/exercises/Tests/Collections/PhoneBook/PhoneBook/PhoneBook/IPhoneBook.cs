@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace PhoneBook
+﻿namespace PhoneBook
 {
     public interface IPhoneBook
     {
