@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddEven", "OddEven\OddEven.csproj", "{B3C96E2E-146D-4A17-887C-1CA731B842CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEven.Tests", "OddEven.Tests\OddEven.Tests.csproj", "{2E46096B-D832-4195-8051-FC7786623869}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3C96E2E-146D-4A17-887C-1CA731B842CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C96E2E-146D-4A17-887C-1CA731B842CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C96E2E-146D-4A17-887C-1CA731B842CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C96E2E-146D-4A17-887C-1CA731B842CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E46096B-D832-4195-8051-FC7786623869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E46096B-D832-4195-8051-FC7786623869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E46096B-D832-4195-8051-FC7786623869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E46096B-D832-4195-8051-FC7786623869}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA62C234-F704-47F2-94FA-A3ABAF3F6AEB}
+	EndGlobalSection
+EndGlobal
